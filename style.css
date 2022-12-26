@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(./fonts/PlayfairDisplay-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 20px;
+}
+header .img-logo {
+  background-image: url(./assets/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 41px;
+  height: 41px;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav p {
+  font: 400 16px "Inter";
+  color: #b8becd;
+  padding-right: 35px;
+}
+header nav p:hover {
+  font: 500 16px "Inter";
+  color: #202336;
+}
+header nav .btn-login {
+  border: 1px solid #fb8f1d;
+  border-radius: 8px;
+  font: 500 15px "Inter";
+  color: #fb8f1d;
+  text-align: center;
+  width: 132px;
+  height: 44px;
+  padding-top: 10px;
+  margin-right: 18px;
+}
+header nav .btn-register {
+  background: #fb8f1d;
+  border-radius: 8px;
+  font: 500 15px "Inter";
+  color: #ffffff;
+  text-align: center;
+  width: 132px;
+  height: 44px;
+  padding-top: 10px;
+}
