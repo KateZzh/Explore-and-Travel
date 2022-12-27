@@ -34,6 +34,13 @@ $orange-color: #fb8f1d;
 $white-color: #ffffff;
 $grey-color: #b8becd;
 $black-color: #0000;
+$darkorange-color: #f18410;
+$dark-grey-color: #202336;
+
+%flex-spb {
+  display: flex;
+  justify-content: space-between;
+}
 
 * {
   margin: 0;
@@ -49,8 +56,8 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  @extend %flex-spb;
+
   padding: 20px 0 20px;
 
   .img-logo {
@@ -70,11 +77,11 @@ header {
       color: $grey-color;
       padding-right: 35px;
 
-        &:hover {
-          font: 500 16px 'Inter';
-          color: #202336;
+      &:hover {
+        font: 500 16px "Inter";
+        color: #202336;
+      }
     }
-}
 
     .btn-login {
       border: 1px solid $orange-color;
@@ -97,6 +104,110 @@ header {
       width: 132px;
       height: 44px;
       padding-top: 10px;
+    }
+  }
+}
+
+.preview {
+  @extend %flex-spb;
+  align-items: center;
+
+  margin-top: 100px;
+
+  .img {
+    background-image: url(./assets/main-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 506px;
+    height: 483px;
+  }
+
+  .left-side {
+    width: 520px;
+
+    h1 {
+      font: 700 64px "Playfair";
+      color: $dark-grey-color;
+    }
+
+    p {
+      font: 600 22px "Inter";
+      color: $dark-grey-color;
+      margin: 40px 0;
+    }
+
+    .btn {
+      background: $orange-color;
+      border-radius: 8px;
+      width: 180px;
+      font: 700 17px "Inter";
+      color: $white-color;
+      text-align: center;
+      padding: 15px 0;
+
+      &:hover {
+        background: $darkorange-color;
+      }
+    }
+
+    .form-inputs {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        margin-bottom: 35px;
+      }
+
+      div:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      input {
+        border: 0.8px solid $grey-color;
+        border-radius: 6px;
+        width: 220px;
+        height: 52px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.info {
+  @extend %flex-spb;
+  align-items: center;
+
+  .img-2 {
+    background-image: url(./assets/setion.png);
+    width: 659px;
+    height: 534px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .right-side {
+    width: 450px;
+
+    h3 {
+      font: 700 36px "Playfair";
+      color: #000000;
+    }
+
+    p {
+      font: 300 17px "Inter";
+      color: #7d7987;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background: #fb8f1d;
+      border-radius: 8px;
+      width: 164px;
+      font: 600 16px "Inter";
+      color: #ffffff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 33px;
     }
   }
 }
