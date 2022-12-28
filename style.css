@@ -28,7 +28,7 @@
   src: url(./fonts/PlayfairDisplay-Bold.ttf) format("truetype");
   font-weight: 700;
 }
-.info, .preview, header {
+footer, .info, .preview, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +49,7 @@
 body {
   width: 1200px;
   margin: 0 auto;
+  background-color: #f5f5f5;
 }
 
 header {
@@ -71,7 +72,7 @@ header nav {
 }
 header nav p {
   font: 400 16px "Inter";
-  color: #b8becd;
+  color: #7d7987;
   padding-right: 35px;
 }
 header nav p:hover {
@@ -89,6 +90,9 @@ header nav .btn-login {
   padding-top: 10px;
   margin-right: 18px;
 }
+header nav .btn-login:hover {
+  background: #ffffff;
+}
 header nav .btn-register {
   background: #fb8f1d;
   border-radius: 8px;
@@ -99,12 +103,15 @@ header nav .btn-register {
   height: 44px;
   padding-top: 10px;
 }
+header nav .btn-register:hover {
+  background: #f18410;
+}
 
 .preview {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
+  margin-top: 125px;
 }
 .preview .img {
   background-image: url(./assets/main-img.png);
@@ -151,7 +158,7 @@ header nav .btn-register {
   margin-right: 30px;
 }
 .preview .left-side .form-inputs input {
-  border: 0.8px solid #b8becd;
+  border: 0.8px solid #7d7987;
   border-radius: 6px;
   width: 220px;
   height: 52px;
@@ -162,6 +169,7 @@ header nav .btn-register {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 100px auto 190px;
 }
 .info .img-2 {
   background-image: url(./assets/setion.png);
@@ -181,6 +189,7 @@ header nav .btn-register {
   font: 300 17px "Inter";
   color: #7d7987;
   margin-top: 20px;
+  line-height: 30px;
 }
 .info .right-side .btn {
   background: #fb8f1d;
@@ -191,4 +200,49 @@ header nav .btn-register {
   text-align: center;
   padding: 15px 0;
   margin-top: 33px;
+}
+.info .right-side .btn:hover {
+  background: #f18410;
+}
+
+footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f9f9fb;
+  padding: 61px 0 120px;
+}
+footer .footer-cooperation {
+  margin-left: 20px;
+}
+footer .footer-cooperation .img-logo2 {
+  background-image: url(./assets/footer-logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 44px;
+  height: 37px;
+}
+footer .footer-cooperation p {
+  font: 300 18px "Inter";
+  color: #848484;
+  margin-top: 22px;
+  width: 350px;
+}
+footer .footer-cooperation p:last-child {
+  width: 100%;
+  margin-top: 40px;
+}
+footer nav p {
+  font: 300 18px "Inter";
+  color: #848484;
+  padding-bottom: 15px;
+  width: 180px;
+}
+footer nav p:hover {
+  font: 500 18px "Inter";
+  color: #202336;
+}
+footer nav p:first-child {
+  font: 700 19px "Inter";
+  color: #000000;
 }

@@ -9,21 +9,25 @@
   src: url(./fonts/Inter-Light.ttf) format("truetype");
   font-weight: 300;
 }
+
 @font-face {
   font-family: "Inter";
   src: url(./fonts/Inter-Medium.ttf) format("truetype");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Inter";
   src: url(./fonts/Inter-Regular.ttf) format("truetype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Inter";
   src: url(./fonts/Inter-SemiBold.ttf) format("truetype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "PlayfairDisplay";
   src: url(./fonts/PlayfairDisplay-Bold.ttf) format("truetype");
@@ -32,10 +36,13 @@
 
 $orange-color: #fb8f1d;
 $white-color: #ffffff;
-$grey-color: #b8becd;
-$black-color: #0000;
+$black-color: #000000;
 $darkorange-color: #f18410;
 $dark-grey-color: #202336;
+$grey-color: #7d7987;
+$background-color: #f5f5f5;
+$white-color-footer: #f9f9fb;
+$grey-color-footer: #848484;
 
 %flex-spb {
   display: flex;
@@ -53,7 +60,10 @@ $dark-grey-color: #202336;
 body {
   width: 1200px;
   margin: 0 auto;
+  background-color: $background-color;
 }
+
+// --------header--------
 
 header {
   @extend %flex-spb;
@@ -79,7 +89,7 @@ header {
 
       &:hover {
         font: 500 16px "Inter";
-        color: #202336;
+        color: $dark-grey-color;
       }
     }
 
@@ -93,6 +103,10 @@ header {
       height: 44px;
       padding-top: 10px;
       margin-right: 18px;
+
+      &:hover {
+        background: $white-color;
+      }
     }
 
     .btn-register {
@@ -104,15 +118,21 @@ header {
       width: 132px;
       height: 44px;
       padding-top: 10px;
+
+      &:hover {
+        background: $darkorange-color;
+      }
     }
   }
 }
 
+// ---------- main ------------
+// ------- section - preview ------
+
 .preview {
   @extend %flex-spb;
   align-items: center;
-
-  margin-top: 100px;
+  margin-top: 125px;
 
   .img {
     background-image: url(./assets/main-img.png);
@@ -173,9 +193,12 @@ header {
   }
 }
 
+// ------- section - info ---------
+
 .info {
   @extend %flex-spb;
   align-items: center;
+  margin: 100px auto 190px;
 
   .img-2 {
     background-image: url(./assets/setion.png);
@@ -190,24 +213,81 @@ header {
 
     h3 {
       font: 700 36px "Playfair";
-      color: #000000;
+      color: $black-color;
     }
 
     p {
       font: 300 17px "Inter";
-      color: #7d7987;
+      color: $grey-color;
       margin-top: 20px;
+      line-height: 30px;
     }
 
     .btn {
-      background: #fb8f1d;
+      background: $orange-color;
       border-radius: 8px;
       width: 164px;
       font: 600 16px "Inter";
-      color: #ffffff;
+      color: $white-color;
       text-align: center;
       padding: 15px 0;
       margin-top: 33px;
+
+      &:hover {
+        background: $darkorange-color;
+      }
+    }
+  }
+}
+
+// ------- footer -------
+
+footer {
+  @extend %flex-spb;
+  align-items: center;
+  background-color: $white-color-footer;
+  padding: 61px 0 120px;
+
+  .footer-cooperation {
+    margin-left: 20px;
+
+    .img-logo2 {
+      background-image: url(./assets/footer-logo.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 44px;
+      height: 37px;
+    }
+
+    p {
+      font: 300 18px "Inter";
+      color: $grey-color-footer;
+      margin-top: 22px;
+      width: 350px;
+
+      &:last-child {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  nav {
+    p {
+      font: 300 18px "Inter";
+      color: $grey-color-footer;
+      padding-bottom: 15px;
+      width: 180px;
+
+      &:hover {
+        font: 500 18px "Inter";
+        color: $dark-grey-color;
+      }
+
+      &:first-child {
+        font: 700 19px "Inter";
+        color: $black-color;
+      }
     }
   }
 }
