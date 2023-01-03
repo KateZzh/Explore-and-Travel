@@ -58,7 +58,7 @@ $grey-color-footer: #848484;
 }
 
 body {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: $background-color;
 }
@@ -81,6 +81,8 @@ header {
   nav {
     display: flex;
     align-items: center;
+    width: 663px;
+    max-width: 90%;
 
     p {
       font: 400 16px "Inter";
@@ -291,3 +293,24 @@ footer {
     }
   }
 }
+
+// @media screen and (max-width: 800px) {
+//   body {
+//     width: 800px;
+//     max-width: 90%;
+//     header {
+//       width: 800px;
+//       position: fixed;
+//       left: 0;
+//       top: 0;
+
+//       nav {
+//         width: 450px;
+//         max-width: 90%;
+//         p {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

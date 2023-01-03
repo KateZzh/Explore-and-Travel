@@ -47,7 +47,7 @@ footer, .info, .preview, header {
 }
 
 body {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: #f5f5f5;
 }
@@ -69,6 +69,8 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 663px;
+  max-width: 90%;
 }
 header nav p {
   font: 400 16px "Inter";
